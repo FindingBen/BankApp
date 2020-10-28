@@ -1,0 +1,30 @@
+{% extends "users/base.html" %}
+{% block content %}
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-12 col-sm-6 col-md-8">
+          
+         <h1>Your dashboard</h1>
+         {% for user in users %}
+          
+          <div class="card" style="width: 18rem;">
+            
+            
+            <div class="card-body">
+              Name:<h3>{{user.username}}</h3>
+              Bank account:<h3></h3>
+              Phone number:<h3>{{user.userprofile.phoneNumber}}</h3>
+              Account rank:<h3>{{user.userprofile.userRank}}</h3>
+              
+            </div>
+          </div>
+          <br>
+          {% endfor %}
+        </div>
+      </div>
+      
+      
+    
+    </div>
+    
+{% endblock content %}

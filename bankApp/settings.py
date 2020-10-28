@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'users.apps.UsersConfig',
+    'crispy_forms',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -118,3 +120,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
+# We are currently not using this, its a form made from Django
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+#W whenever user logs in it directs him to home page automatically
+LOGIN_REDIRECT_URL = 'home'
+
+LOGIN_URL = 'login'

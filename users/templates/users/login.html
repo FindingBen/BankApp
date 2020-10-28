@@ -1,0 +1,13 @@
+{% extends "users/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form action="{% url 'users:login' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" placeholder="username" name="username">
+            <br>
+            <input type="password" placeholder="password" name="password">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+{% endblock content %}
